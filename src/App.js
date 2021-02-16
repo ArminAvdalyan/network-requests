@@ -5,6 +5,7 @@ import Layout from 'components/Layout/Layout';
 import Posts from 'containers/Posts/Posts';
 
 import './App.css';
+import Todo from "containers/Todo/Todo";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <Layout >
       <Posts />
+      {/* <Todo /> */}
       </Layout>
     </div>
   );

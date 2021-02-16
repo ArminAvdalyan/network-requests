@@ -14,7 +14,7 @@ const Post = ( { post, className = "" } ) => {
 }
 
 Post.prototypes = {
-  post:PropTypes.shape( {
+  post: PropTypes.shape( {
     title: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,
     id: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
