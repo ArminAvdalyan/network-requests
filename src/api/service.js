@@ -19,7 +19,11 @@ class Service {
   }
 
   getPosts = (start, limit = 9) => {
-    return this._request("GET", `/posts?_start=${start}&_limit=${limit}`)
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        return resolve(this._request("GET", `/posts?_start=${start}&_limit=${limit}`))
+      }, 3000)
+    })
   }
 
   getAllPosts = () => {
