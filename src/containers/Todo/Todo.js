@@ -4,18 +4,6 @@ import {getAllTodos} from "api/requestData";
 
 export class Todo extends Component {
 
-  state = {
-    todos: []
-  }
-
-  componentDidMount() {
-    getAllTodos()
-    .then(data => {
-      this.setState({
-        todos: data
-      })
-    })
-  }
   render() {
     return (
       <div>
@@ -24,4 +12,5 @@ export class Todo extends Component {
     )
   }
 }
+
 export default Todo;
