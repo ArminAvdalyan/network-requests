@@ -19,7 +19,7 @@ const AppRoutes = () => {
           <Route exect path="/todo" render={(routeParams) => <Todo {...routeParams} />} />
           <Route exact path="/" component={HomePage} />
           <Route exact path="*" >
-            <div>404</div>
+            {/* <div>404</div> */}
           </Route>
         {/* </Switch> */}
       </Layout>

@@ -1,5 +1,6 @@
 import React from "react";
-import Link from "components/Link/Link";
+
+import NavLink from "components/NavLink/NavLink";
 
 import "./Header.scss";
 
@@ -9,14 +10,15 @@ const Header = () => {
       <nav>
         <ul className="app-header_ul">
           <li className="app-header_ul_li">
-            <Link to="/">Homepage</Link>
+            <NavLink to="/">Homepage</NavLink>
           </li>
           <li className="app-header_ul_li">
-            <Link to="/posts">Posts</Link>
+            <NavLink to="/posts">Posts</NavLink>
           </li>
           <li className="app-header_ul_li">
-            <Link to="/todo">Todos</Link>
+            <NavLink to="/todo">Todos</NavLink>
           </li>
+          
         </ul>
       </nav>
     </div>
