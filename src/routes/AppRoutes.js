@@ -7,6 +7,7 @@ import Posts from 'containers/Posts/Posts';
 import Todo from "containers/Todo/Todo";
 import HomePage from "containers/HomePage/HompePage";
 import PostsDetails from "containers/PostDetails/PostDetails";
+import Auth from "containers/Auth/Auth";
 
 const AppRoutes = () => {
   return (
@@ -17,6 +18,8 @@ const AppRoutes = () => {
           <Route exact path="/posts" component={Posts} />
           <Route exact path="/posts/:postsId" component={PostsDetails} />
           <Route exect path="/todo" render={(routeParams) => <Todo {...routeParams} />} />
+          <Route exect path="/auth" component={Auth} />
+
           <Route exact path="/" component={HomePage} />
           <Route exact path="*" >
             {/* <div>404</div> */}

@@ -2,11 +2,12 @@ import React from "react";
 
 import "./Button.scss";
 
-const Button = () => {
+const Button = (props) => {
   return (
-    <div>
-
-    </div>
+   <button onClick={props.onClick}>
+     {props.title}
+     
+   </button>
   )
 }
 

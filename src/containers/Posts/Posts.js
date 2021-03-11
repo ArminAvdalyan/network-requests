@@ -5,8 +5,9 @@ import service from "api/service";
 // import { getAllPosts } from "api/requestData";
 
 import "./Posts.scss";
+import fbService from "api/fbService";
 
-const limit = 9;
+const limit = 8;
 
 export class Posts extends Component {
   state = {
@@ -17,15 +18,12 @@ export class Posts extends Component {
   }
 
   componentDidMount() {
-    service.getPosts(this.state.start)
+    fbService.getPosts(this.state.start, limit)
       .then(resJson => {
         this.setState({
           posts: resJson,
         })
       })
-    // .catch(err => {
-
-    // })
   }
 
   updatePost = () => {
@@ -71,12 +69,12 @@ export class Posts extends Component {
   }
 
   getMore = () => {
-    const newStart = this.state.start + limit;
+    const newStart = this.state.start + limit + 1;
     this.setState({
       start: newStart,
       loading: true
     })
-    service.getPosts(newStart)
+    fbService.getPosts(newStart, newStart + limit)
       .then(data => {
         this.setState({
           posts: [...this.state.posts, ...data],
